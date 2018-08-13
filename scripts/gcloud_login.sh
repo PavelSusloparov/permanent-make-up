@@ -2,7 +2,7 @@
 
 set_active_project() {
     gcloud auth login
-    gcloud config set project elevated-range-213101
+    gcloud config set project permanent-make-up
     gcloud auth application-default login
 }
 
