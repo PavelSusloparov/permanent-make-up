@@ -1,4 +1,4 @@
-package com.example.guestbook;
+package com.project.service;
 
 import org.springframework.data.repository.PagingAndSortingRepository;
 import org.springframework.data.rest.core.annotation.RepositoryRestResource;

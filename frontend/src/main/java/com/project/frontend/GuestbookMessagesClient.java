@@ -1,4 +1,4 @@
-package com.example.frontend;
+package com.project.frontend;
 
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.hateoas.*;

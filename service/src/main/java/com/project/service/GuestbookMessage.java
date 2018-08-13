@@ -1,4 +1,4 @@
-package com.example.guestbook;
+package com.project.service;
 
 import javax.persistence.*;
 import lombok.*;
