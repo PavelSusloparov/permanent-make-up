@@ -1,13 +1,8 @@
 package com.project.frontend;
 
 import org.springframework.cloud.openfeign.FeignClient;
-import org.springframework.hateoas.Resource;
-import org.springframework.hateoas.Resources;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-
+import org.springframework.hateoas.*;
+import org.springframework.web.bind.annotation.*;
 import java.util.Map;
 
 // We can use a number of different clients. For the lab, we'll use Feign.
