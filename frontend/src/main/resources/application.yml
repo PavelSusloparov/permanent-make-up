@@ -1,0 +1,2 @@
+spring.boot.admin.url: http://localhost:8081
+management.security.enabled: false
