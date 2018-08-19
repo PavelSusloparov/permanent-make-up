@@ -6,25 +6,38 @@ Project [link](https://permanent-make-up.appspot.com/)
 
 ## Local run
 
-Run frontend locally:
-
-In a separate console tab - 
-```
-cd frontend
-./run.sh
-```
-
 Start local MySQL:
 In a separate console tab - 
 ```
 docker-compose up
 ```
 
-Run service locally:
+Run eureka-service(Services discovery) locally:
 In a separate console tab - 
 ```
-cd service
+cd eureka-service
+./run.sh
+```
+
+Run admin-service locally:
+In a separate console tab - 
+```
+cd admin-service
+./run.sh
+```
+
+Run backend-service locally:
+In a separate console tab - 
+```
+cd backend-service
 ./run-local.sh
+```
+
+Run frontend-service locally:
+In a separate console tab - 
+```
+cd frontend-service
+./run.sh
 ```
 
 Run service against cloud database:
@@ -32,7 +45,7 @@ Upload project editor service account to ~/google/permanent-make-up/project-edit
 
 In a separate console tab - 
 ```
-cd service
+cd backend-service
 ./run-cloud.sh
 ```
 
@@ -40,11 +53,11 @@ cd service
 
 Deploy to app engine:
 ```
-cd frontend
+cd frontend-service
 ./deploy.sh
 ```
 
 ```
-cd service
+cd backend-service
 ./deploy.sh
 ```
