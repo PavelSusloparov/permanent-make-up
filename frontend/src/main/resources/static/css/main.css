@@ -1,0 +1,31 @@
+body {
+    padding-top: 80px;
+}
+
+form span {
+    font-weight: bold; padding-right: 1em; display: block;
+}
+
+form input[type="submit"] {
+    display: block; margin-top: 1em;
+}
+
+.greeting {
+    padding-bottom: 0.5em;
+}
+
+.messages {
+    border-top: 1px solid black
+}
+
+.message {
+    display: block;
+}
+
+.message span {
+    padding-top: 0.5em;
+}
+
+.message .username {
+    font-weight: bold; width: 100px; float: left;
+}

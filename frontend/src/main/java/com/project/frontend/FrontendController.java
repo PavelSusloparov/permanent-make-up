@@ -36,7 +36,7 @@ public class FrontendController {
 	private GcpProjectIdProvider projectIdProvider;
 
 	@Autowired
-	private GuestbookMessagesClient client;
+	private GuestbookMessagesClient guestbookMessagesClient;
 	
 	@Value("${greeting:Hello}")
 	private String greeting;
@@ -47,7 +47,7 @@ public class FrontendController {
 			String name = (String) model.asMap().get("name");
 			model.addAttribute("greeting", String.format("%s %s", greeting, name));
 		}
-		model.addAttribute("messages", client.getMessages().getContent());
+		model.addAttribute("messages", guestbookMessagesClient.getMessages().getContent());
 		return "index";
 	}
 	
@@ -80,7 +80,7 @@ public class FrontendController {
 			payload.put("message", message);
 			// Store the generated file name in the database
 			payload.put("imageUri", filename);
-			client.add(payload);
+			guestbookMessagesClient.add(payload);
 		}
 		return "redirect:/";
   }

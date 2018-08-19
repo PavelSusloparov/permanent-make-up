@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 
-./mvnw spring-boot:run -Dserver.port=8081 -Dspring.profiles.active=local
+./mvnw spring-boot:run -Dspring.profiles.active=local
