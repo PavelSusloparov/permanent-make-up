@@ -1,4 +1,4 @@
-package com.example.guestbook;
+package com.project.service;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
