@@ -1,0 +1,7 @@
+spring:
+  cloud:
+    gcp:
+      config:
+        enabled: true
+        name: frontend
+        profile: cloud

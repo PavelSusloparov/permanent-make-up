@@ -1,0 +1,28 @@
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    open-in-view: true
+    database-platform: org.hibernate.dialect.MySQL55Dialect
+  cloud:
+    gcp:
+      sql:
+        database-name: main
+        instance-connection-name: permanent-make-up:us-central1:permanent-make-up
+  datasource:
+    username: permanent_make_up_rwx
+    password: ekl84
+    tomcat:
+      initial-size: 1
+      max-active: 5
+      test-on-borrow: true
+    hikari:
+      maximum-pool-size: 5
+  sleuth:
+    sampler:
+      probability: 1
+    web:
+      skipPattern: (^cleanup.*|.+favicon.*)
+
+logging:
+  file: /var/log/permanent-make-up-backend-service.log

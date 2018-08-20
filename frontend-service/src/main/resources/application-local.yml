@@ -1,0 +1,2 @@
+logging:
+  file: /tmp/permanent-make-up-frontend-service.log

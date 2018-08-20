@@ -1,0 +1,11 @@
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: validate
+  datasource:
+    url: jdbc:mysql://localhost:3308/main
+    username: permanent_make_up_rwx
+    password: ekl84
+
+logging:
+  file: /tmp/permanent-make-up-frontend-service.log

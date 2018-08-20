@@ -1,0 +1,7 @@
+spring:
+  application:
+    name: frontend-service
+  cloud:
+    gcp:
+      config:
+        enabled: false

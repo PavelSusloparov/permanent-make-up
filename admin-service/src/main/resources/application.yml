@@ -32,13 +32,13 @@ spring:
   profiles: secure
   security:
     user:
-      name: "user"
-      password: "password"
+      name: "admin"
+      password: "ueq4m32"
 eureka:
   instance:
     metadata-map:
-      user.name: "user"         #These two are needed so that the server
-      user.password: "password" #can access the protected client endpoints
+      user.name: "admin"         #These two are needed so that the server
+      user.password: "ueq4m32"   #can access the protected client endpoints
 
 server:
   port: 0
