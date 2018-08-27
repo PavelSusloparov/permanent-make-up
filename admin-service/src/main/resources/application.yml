@@ -41,4 +41,4 @@ eureka:
       user.password: "ueq4m32"   #can access the protected client endpoints
 
 server:
-  port: 0
+  port: 8081

@@ -45,12 +45,14 @@ spec:
           value: "false"
         - name: SPRING_CLOUD_GCP_CONFIG_ENABLED
           value: "false"
-        - name: MESSAGES_ENDPOINT
-          value: http://guestbook-service:8080/guestbookMessages
         - name: SPRING_PROFILES_ACTIVE
           value: cloud
         - name: GOOGLE_APPLICATION_CREDENTIALS
           value: /etc/credentials/service-account.json
+        - name: EUREKA_SERVICE_URL
+          value: "http://eureka:8761" #"eureka" host is resolved by K8s DNS matching the service name
+        - name: EUREKA_INSTANCE_PREFER_IP_ADDRESS
+          value: "true"
         ports:
         - name: http
           containerPort: 8080

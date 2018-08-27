@@ -44,6 +44,10 @@ spec:
           value: cloud
         - name: GOOGLE_APPLICATION_CREDENTIALS
           value: /etc/credentials/service-account.json
+        - name: EUREKA_SERVICE_URL
+          value: "http://eureka:8761" #"eureka" host is resolved by K8s DNS matching the service name
+        - name: EUREKA_INSTANCE_PREFER_IP_ADDRESS
+          value: "true"
         ports:
         - name: http
           containerPort: 8080
