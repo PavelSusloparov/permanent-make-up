@@ -2,50 +2,53 @@ apiVersion: v1
 kind: Service
 metadata:
   labels:
-    app: backend-service
-  name: backend-service
+    app: frontend-service
+  name: frontend-service
 spec:
+  type: LoadBalancer
   ports:
   - name: http
     port: 8080
     targetPort: 8080
   selector:
-    app: backend-service
+    app: frontend-service
 ---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
-    app: backend-service
-  name: backend-service
+    app: frontend-service
+  name: frontend-service
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: backend-service
+      app: frontend-service
   template:
     metadata:
       labels:
-        app: backend-service
+        app: frontend-service
     spec:
       volumes:
       - name: credentials
         secret:
-          secretName: backend-service-account
+          secretName: permanent-make-up-service-account
       containers:
-      - name: backend-service
-        image: gcr.io/permanent-make-up/frontend-service
+      - name: frontend-service
+        image: gcr.io/permanent-make-up/backend-service
         volumeMounts:
         - name: credentials
           mountPath: "/etc/credentials"
           readOnly: true
         env:
+        - name: SPRING_CLOUD_CONFIG_ENABLED
+          value: "false"
+        - name: SPRING_CLOUD_GCP_CONFIG_ENABLED
+          value: "false"
         - name: SPRING_PROFILES_ACTIVE
           value: cloud
         - name: GOOGLE_APPLICATION_CREDENTIALS
-          value: /etc/credentials/service-account.json
-        - name: EUREKA_SERVICE_URL
-          value: "http://eureka:8761" #"eureka" host is resolved by K8s DNS matching the service name
+          value: /etc/credentials/project-editor.json
         - name: EUREKA_INSTANCE_PREFER_IP_ADDRESS
           value: "true"
         ports:

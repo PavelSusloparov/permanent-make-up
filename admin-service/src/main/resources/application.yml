@@ -12,7 +12,7 @@ eureka:
   client:
     registryFetchIntervalSeconds: 5
     serviceUrl:
-      defaultZone: ${EUREKA_SERVICE_URL:http://localhost:8761}/eureka/
+      defaultZone: http://35.193.236.232:8761/eureka/
 
 management:
   endpoints:
