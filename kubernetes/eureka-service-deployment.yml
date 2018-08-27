@@ -30,7 +30,7 @@ spec:
     spec:
       containers:
       - name: eureka-service
-        image: springcloud/eureka
+        image: gcr.io/permanent-make-up/eureka-service
         env:
         - name: EUREKA_INSTANCE_PREFERIPADDRESS
           value: "true"

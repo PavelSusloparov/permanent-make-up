@@ -1,3 +1,9 @@
+spring:
+  security:
+    user:
+      name: "admin"
+      password: "ueq4m32"
+
 management:
   endpoints:
     web:
@@ -5,12 +11,15 @@ management:
         include: "*"
 eureka:
   instance:
+    metadata-map:
+      user.name: "admin"         #These two are needed so that the server
+      user.password: "ueq4m32"   #can access the protected client endpoints
     leaseRenewalIntervalInSeconds: 10
     health-check-url-path: /actuator/health
   client:
     registryFetchIntervalSeconds: 5
     serviceUrl:
-      defaultZone: http://35.193.236.232:8761/eureka/
+      defaultZone: http://eureka-service:8761/eureka/
 
 server:
   port: 8080

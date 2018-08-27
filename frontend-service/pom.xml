@@ -160,6 +160,11 @@
 					<to>
 						<image>gcr.io/permanent-make-up/frontend-service</image>
 					</to>
+					<container>
+						<ports>
+							<port>8080</port>
+						</ports>
+					</container>
 				</configuration>
 			</plugin>
 		</plugins>

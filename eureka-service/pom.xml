@@ -55,9 +55,17 @@
 				<artifactId>jib-maven-plugin</artifactId>
 				<version>0.9.8</version>
 				<configuration>
+					<from>
+						<image>openjdk:alpine</image>
+					</from>
 					<to>
 						<image>gcr.io/permanent-make-up/eureka-service</image>
 					</to>
+					<container>
+						<ports>
+							<port>8761</port>
+						</ports>
+					</container>
 				</configuration>
 			</plugin>
 		</plugins>

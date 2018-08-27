@@ -140,6 +140,11 @@
 					<to>
 						<image>gcr.io/permanent-make-up/backend-service</image>
 					</to>
+					<container>
+						<ports>
+							<port>8082</port>
+						</ports>
+					</container>
 				</configuration>
 			</plugin>
 		</plugins>
