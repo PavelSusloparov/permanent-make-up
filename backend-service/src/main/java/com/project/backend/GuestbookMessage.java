@@ -1,4 +1,4 @@
-package com.project.service;
+package com.project.backend;
 
 import lombok.Data;
 

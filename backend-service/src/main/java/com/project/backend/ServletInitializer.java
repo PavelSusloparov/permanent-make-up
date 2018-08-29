@@ -1,4 +1,4 @@
-package com.project.service;
+package com.project.backend;
 
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;

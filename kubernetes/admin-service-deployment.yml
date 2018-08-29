@@ -34,7 +34,7 @@ spec:
           secretName: permanent-make-up-service-account
       containers:
       - name: admin-service
-        image: gcr.io/permanent-make-up/admin-service
+        image: gcr.io/permanent-make-up/admin-service:latest
         volumeMounts:
         - name: credentials
           mountPath: "/etc/credentials"

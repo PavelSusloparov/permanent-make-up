@@ -1,4 +1,4 @@
-package com.project.service;
+package com.project.backend;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.client.ServiceInstance;

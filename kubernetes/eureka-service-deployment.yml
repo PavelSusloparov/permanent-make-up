@@ -30,7 +30,7 @@ spec:
     spec:
       containers:
       - name: eureka-service
-        image: gcr.io/permanent-make-up/eureka-service
+        image: gcr.io/permanent-make-up/eureka-service:latest
         env:
         - name: EUREKA_INSTANCE_PREFERIPADDRESS
           value: "true"
